@@ -1,24 +1,18 @@
 package com.virgin.novel.controller.test;
 
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Set;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.apache.log4j.Logger;
 
-import com.virgin.novel.controller.author.AuthorAction;
-
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
+import com.virgin.novel.util.Log4jUtil;
 
 public class Test {
-	
+	private static Logger logger = Logger.getLogger(Test.class);
 	public static void main(String[] args) throws MalformedURLException {
+		
+		Log4jUtil.configure();
+		logger.debug("sun");
+		
 		//ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
 		//AuthorAction authorAction = (AuthorAction) context.getBean("authorAction");
 		//authorAction.publish("channel", "bbb");
@@ -35,7 +29,7 @@ public class Test {
 		}
 		System.out.println(constraintViolationSet.size());
 		 */
-		try{
+		/*try{
 			SimpleDateFormat simpleDateFormat =  new SimpleDateFormat("yyyy-MM-dd");
 			Date startDate = simpleDateFormat.parse("2016-12-383");
 			Date endDate = simpleDateFormat.parse("2017-01-34");
@@ -50,7 +44,7 @@ public class Test {
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
-		}
+		}*/
 
 	}
 }
