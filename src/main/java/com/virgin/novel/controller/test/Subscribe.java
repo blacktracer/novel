@@ -9,6 +9,6 @@ public class Subscribe {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
 		AuthorAction authorAction = (AuthorAction) context.getBean("authorAction");
-		authorAction.subscribe("channel");
+		//authorAction.subscribe("channel");
 	}
 }
